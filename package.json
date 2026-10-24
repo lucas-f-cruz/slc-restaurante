@@ -1,0 +1,15 @@
+{
+  "name": "sol-e-lua",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev -w apps/server",
+    "dev:client": "npm run dev -w apps/client",
+    "dev:dashboard": "npm run dev -w apps/dashboard",
+    "build": "npm run build -w packages/shared && npm run build -w apps/server && npm run build -w apps/client && npm run build -w apps/dashboard",
+    "db:seed": "npm run seed -w apps/server"
+  }
+}

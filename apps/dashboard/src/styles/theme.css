@@ -1,0 +1,53 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Fraunces';
+  src: local('Fraunces');
+}
+
+:root {
+  --sol-bg:#F6EEE1; --sol-bg-2:#EFE3CE; --sol-card:#FFFDF8; --sol-card-2:#FBF4E6;
+  --sol-ink:#5C2A1E; --sol-ink-2:#7A3B24; --sol-text:#4A3428; --sol-accent:#E29A3C; --sol-line:#E5D5B8;
+  --lua-bg:#0F1638; --lua-bg-2:#161F4C; --lua-card:#141C46; --lua-card-2:#101838;
+  --lua-ink:#F4EFE3; --lua-text:#CBD1E8; --lua-accent:#D9A85C; --lua-line:#2B3568;
+
+  --bg:var(--sol-bg); --bg-2:var(--sol-bg-2); --card:var(--sol-card); --card-2:var(--sol-card-2);
+  --ink:var(--sol-ink); --ink-2:var(--sol-ink-2); --text:var(--sol-text); --accent:var(--sol-accent); --line:var(--sol-line);
+
+  --st-novo:#4F8FE8; --st-preparando:#E2A93C; --st-pronto:#4FA96F; --st-entregue:#9C7FBF; --st-finalizado:#8A8A8A; --st-recusado:#C1502E;
+  --tb-livre:#4FA96F; --tb-aguardando:#E2A93C; --tb-andamento:#4F8FE8; --tb-pronto:#E8823C; --tb-ocupada:#C1502E;
+  --cat-drinks:#4FA9A0; --cat-bebidas:#5C7CBF; --cat-petiscos:#C1502E; --cat-pratos:#7A3B24; --cat-sobremesas:#C46A82;
+
+  --radius:14px; --radius-lg:20px;
+  --shadow:0 10px 30px -16px rgba(0,0,0,.28);
+  --shadow-lg:0 22px 50px -20px rgba(0,0,0,.35);
+  --t:.35s cubic-bezier(.4,0,.2,1);
+
+  font-family: 'Manrope', system-ui, sans-serif;
+  color-scheme: light;
+}
+
+.dark {
+  --bg:var(--lua-bg); --bg-2:var(--lua-bg-2); --card:var(--lua-card); --card-2:var(--lua-card-2);
+  --ink:var(--lua-ink); --ink-2:var(--lua-ink); --text:var(--lua-text); --accent:var(--lua-accent); --line:var(--lua-line);
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background var(--t), color var(--t);
+  margin: 0;
+}
+
+.font-display { font-family: 'Fraunces', serif; }
+
+@keyframes glowPulse { 0%,100%{ transform:scale(1); opacity:.3; } 50%{ transform:scale(1.18); opacity:.55; } }
+@keyframes dotPulse { 0%,100%{opacity:1;} 50%{opacity:.4;} }
+@keyframes sectionIn { from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);} }
+@keyframes cardIn { from{opacity:0; transform:translateY(-6px);} to{opacity:1; transform:translateY(0);} }
+@keyframes tabGlow { 0%,100%{ transform:scale(1); opacity:.55; } 50%{ transform:scale(1.25); opacity:.85; } }
+@keyframes toastIn { from{ opacity:0; transform:translateX(30px); } to{ opacity:1; transform:translateX(0); } }
+@keyframes dotPulse { 0%,100%{opacity:1;} 50%{opacity:.4;} }
+
+::selection { background: var(--accent); color: #fff; }
